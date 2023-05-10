@@ -11,6 +11,6 @@ export class User {
         this.avatar     = avatar;
         this.firstName = firstName;
         this.lastName  = lastName;
-        this.gender     = genter;
+        this.gender     = gender;
     }
 }

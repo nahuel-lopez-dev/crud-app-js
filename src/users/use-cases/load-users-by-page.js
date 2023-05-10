@@ -1,8 +1,10 @@
+import { localhostUserToModel } from "../mappers/localhost-user.mapper";
+import { User } from '../models/user';
 
 /**
  * 
  * @param {Number} page
- * @returns 
+ * @returns { Promise<User[]>}
  */
 export const loadUsersByPage = async(page = 1) => {
     
@@ -10,6 +12,9 @@ export const loadUsersByPage = async(page = 1) => {
     const res = await fetch(url);
     const data = await res.json();
 
-    console.log(data)
-
+    // const users = data.map( userLike => localhostUserToModel(userLike))
+    // el primer argumento sólo se pasa como argumento a la función, por lo que puede se puede simplificar
+    const users = data.map( localhostUserToModel ) // Es la forma abreviada, mandando la función como referencia
+    // console.log(users)
+    return users;
 }
