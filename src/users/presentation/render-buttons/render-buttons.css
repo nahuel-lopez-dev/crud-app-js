@@ -1,0 +1,12 @@
+button {
+    color: rgb(243, 243, 114);
+    margin: 10px;
+    padding: 10px;
+
+}
+
+#current-page {
+    color: rgb(115, 154, 239);
+    font-size: 1.3rem;
+    margin: 0 10px 0 10px;
+}
